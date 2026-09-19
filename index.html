@@ -1,0 +1,243 @@
+<!DOCTYPE html> <html lang="pl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>TalkZone — Twój bot Discord</title> <meta name="description" content="TalkZone — nowoczesny bot Discord do zarządzania i rozwijania Twojego serwera."> <style> * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; } :root { --bg: #0b0b12; --bg2: #11111b; --card: #171724; --card-hover: #1d1d2d; --primary: #5865f2; --primary2: #7289ff; --text: #ffffff; --muted: #a6a6b3; --border: rgba(255,255,255,0.08); } body { font-family: Arial, Helvetica, sans-serif; background: radial-gradient(circle at 20% 10%, rgba(88,101,242,.20), transparent 30%), radial-gradient(circle at 80% 20%, rgba(124,58,237,.15), transparent 30%), var(--bg); color: var(--text); line-height: 1.6; } /* NAVBAR */ nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11,11,18,.75); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); } .logo { font-size: 25px; font-weight: 800; color: white; } .logo span { color: var(--primary2); } nav ul { display: flex; list-style: none; gap: 28px; } nav a { color: var(--muted); text-decoration: none; transition: .2s; } nav a:hover { color: white; } /* HERO */ .hero { min-height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 80px; } .hero-content { max-width: 850px; } .badge { display: inline-block; padding: 8px 16px; border: 1px solid rgba(88,101,242,.4); background: rgba(88,101,242,.1); color: #9da7ff; border-radius: 999px; margin-bottom: 22px; font-size: 14px; } .hero h1 { font-size: clamp(50px, 9vw, 100px); line-height: 1; margin-bottom: 25px; letter-spacing: -4px; } .hero h1 span { background: linear-gradient(90deg, #5865f2, #9b6cff); -webkit-background-clip: text; color: transparent; } .hero p { color: var(--muted); font-size: 19px; max-width: 650px; margin: 0 auto 35px; } .buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; } .btn { padding: 14px 24px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: .25s; display: inline-block; } .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 30px rgba(88,101,242,.25); } .btn-primary:hover { background: var(--primary2); transform: translateY(-3px); } .btn-secondary { border: 1px solid var(--border); background: rgba(255,255,255,.04); color: white; } .btn-secondary:hover { background: rgba(255,255,255,.09); transform: translateY(-3px); } /* SECTIONS */ section { padding: 100px 7%; max-width: 1300px; margin: auto; } .section-title { text-align: center; margin-bottom: 55px; } .section-title h2 { font-size: 40px; margin-bottom: 10px; } .section-title p { color: var(--muted); } /* FEATURES */ .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; } .card { background: linear-gradient(145deg, var(--card), #12121c); border: 1px solid var(--border); border-radius: 18px; padding: 30px; transition: .25s; } .card:hover { transform: translateY(-6px); background: var(--card-hover); border-color: rgba(88,101,242,.3); } .icon { font-size: 35px; margin-bottom: 15px; } .card h3 { margin-bottom: 10px; } .card p { color: var(--muted); } /* LEGAL */ .legal { max-width: 1000px; } .legal-box { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 35px; margin-bottom: 30px; } .legal-box h3 { color: #8790ff; margin: 25px 0 8px; } .legal-box h3:first-child { margin-top: 0; } .legal-box p { color: var(--muted); margin-bottom: 12px; } /* CTA */ .cta { text-align: center; padding: 100px 20px; } .cta-box { max-width: 900px; margin: auto; padding: 65px 30px; border-radius: 25px; background: radial-gradient(circle at center, rgba(88,101,242,.25), transparent 60%), var(--card); border: 1px solid var(--border); } .cta h2 { font-size: 42px; margin-bottom: 15px; } .cta p { color: var(--muted); margin-bottom: 30px; } /* FOOTER */ footer { border-top: 1px solid var(--border); padding: 35px 7%; text-align: center; color: var(--muted); } footer strong { color: white; } /* MOBILE */ @media (max-width: 800px) { nav ul { display: none; } .features { grid-template-columns: 1fr; } section { padding: 75px 5%; } .hero h1 { letter-spacing: -2px; } .hero p { font-size: 16px; } .section-title h2, .cta h2 { font-size: 32px; } .legal-box { padding: 25px; } } </style> </head> <body> <nav> <div class="logo">Talk<span>Zone</span></div>
+<ul>
+    <li><a href="#home">Start</a></li>
+    <li><a href="#funkcje">Funkcje</a></li>
+    <li><a href="#regulamin">Regulamin</a></li>
+    <li><a href="#prywatnosc">Prywatność</a></li>
+</ul>
+
+</nav> <!-- HERO --> <header class="hero" id="home"> <div class="hero-content">
+    <div class="badge">🤖 Nowoczesny bot Discord</div>
+
+    <h1>Witaj w <span>TalkZone</span></h1>
+
+    <p>
+        TalkZone to bot Discord stworzony z myślą o wygodnym
+        zarządzaniu serwerem, społeczności i codziennej komunikacji.
+    </p>
+
+    <div class="buttons">
+        <a
+            class="btn btn-primary"
+            href="https://discord.com/oauth2/authorize?client_id=1549859092888297573&permissions=8&integration_type=0&scope=bot"
+            target="_blank">
+            ➕ Dodaj do Discorda
+        </a>
+
+        <a
+            class="btn btn-secondary"
+            href="https://discord.gg/QffxZBNjd"
+            target="_blank">
+            💬 Dołącz do serwera
+        </a>
+    </div>
+
+</div>
+
+</header> <!-- FEATURES --> <section id="funkcje">
+<div class="section-title">
+    <h2>🤖 Funkcje TalkZone</h2>
+    <p>Najważniejsze możliwości bota w jednym miejscu.</p>
+</div>
+
+<div class="features">
+
+    <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Moderacja</h3>
+        <p>
+            Narzędzia pomagające administratorom utrzymać
+            porządek i bezpieczeństwo na serwerze.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Prosta konfiguracja</h3>
+        <p>
+            Łatwa konfiguracja funkcji bota bez zbędnego
+            komplikowania ustawień serwera.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">💬</div>
+        <h3>Komendy</h3>
+        <p>
+            Przydatne komendy pozwalające korzystać z funkcji
+            TalkZone bezpośrednio na Discordzie.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🎉</div>
+        <h3>Rozrywka</h3>
+        <p>
+            Funkcje społecznościowe i rozrywkowe pomagające
+            urozmaicić życie serwera.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🔔</div>
+        <h3>Powiadomienia</h3>
+        <p>
+            Możliwość informowania użytkowników o ważnych
+            wydarzeniach i aktywnościach.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🚀</div>
+        <h3>Rozwój</h3>
+        <p>
+            TalkZone jest rozwijany wraz z potrzebami
+            społeczności i użytkowników.
+        </p>
+    </div>
+
+</div>
+
+</section> <!-- REGULAMIN --> <section id="regulamin" class="legal">
+<div class="section-title">
+    <h2>📜 Regulamin</h2>
+    <p>Zasady korzystania z TalkZone.</p>
+</div>
+
+<div class="legal-box">
+
+    <h3>1. Postanowienia ogólne</h3>
+    <p>
+        Korzystając z bota TalkZone, użytkownik akceptuje
+        niniejszy regulamin oraz zasady Discord.
+    </p>
+
+    <h3>2. Korzystanie z bota</h3>
+    <p>
+        Użytkownik zobowiązuje się korzystać z TalkZone
+        zgodnie z obowiązującym prawem, zasadami Discord
+        oraz zasadami obowiązującymi na danym serwerze.
+    </p>
+
+    <h3>3. Zabronione działania</h3>
+    <p>
+        Zabrania się wykorzystywania bota do działań
+        niezgodnych z prawem, spamowania, nadużywania
+        jego funkcji lub celowego powodowania jego
+        nieprawidłowego działania.
+    </p>
+
+    <h3>4. Odpowiedzialność</h3>
+    <p>
+        Twórcy TalkZone nie ponoszą odpowiedzialności za
+        treści przesyłane przez użytkowników ani za szkody
+        wynikające z nieprawidłowego korzystania z bota.
+    </p>
+
+    <h3>5. Dostępność</h3>
+    <p>
+        Bot może być czasowo niedostępny z powodu prac
+        technicznych, aktualizacji lub awarii.
+    </p>
+
+    <h3>6. Zmiany regulaminu</h3>
+    <p>
+        Regulamin może zostać zmieniony w przypadku rozwoju
+        projektu lub zmian technicznych. Aktualna wersja
+        będzie publikowana na tej stronie.
+    </p>
+
+</div>
+
+</section> <!-- PRIVACY --> <section id="prywatnosc" class="legal">
+<div class="section-title">
+    <h2>🔒 Polityka prywatności</h2>
+    <p>Informacje dotyczące danych przetwarzanych przez TalkZone.</p>
+</div>
+
+<div class="legal-box">
+
+    <h3>1. Administrator danych</h3>
+    <p>
+        Administratorem danych związanych z działaniem TalkZone
+        jest właściciel projektu TalkZone.
+    </p>
+
+    <h3>2. Jakie dane mogą być przetwarzane?</h3>
+    <p>
+        W zależności od używanych funkcji bot może przetwarzać
+        podstawowe informacje udostępniane przez Discord,
+        takie jak identyfikator użytkownika, identyfikator serwera,
+        identyfikator kanału lub informacje wymagane do wykonania
+        konkretnej komendy.
+    </p>
+
+    <h3>3. Cel przetwarzania</h3>
+    <p>
+        Dane mogą być wykorzystywane wyłącznie w celu zapewnienia
+        działania funkcji TalkZone, obsługi komend, moderacji,
+        konfiguracji serwera oraz poprawy działania projektu.
+    </p>
+
+    <h3>4. Przechowywanie danych</h3>
+    <p>
+        Dane, które nie są potrzebne do działania określonej
+        funkcji, nie powinny być przechowywane dłużej niż jest
+        to konieczne.
+    </p>
+
+    <h3>5. Udostępnianie danych</h3>
+    <p>
+        Dane użytkowników nie są przeznaczone do sprzedaży.
+        Mogą być udostępnione podmiotom trzecim wyłącznie,
+        jeżeli jest to niezbędne do działania usług lub wymagane
+        przez prawo.
+    </p>
+
+    <h3>6. Prawa użytkownika</h3>
+    <p>
+        Użytkownik może zwrócić się do administratora projektu
+        z pytaniem dotyczącym przetwarzania jego danych oraz
+        z żądaniem usunięcia danych, jeśli przepisy prawa
+        przewidują takie uprawnienie.
+    </p>
+
+    <h3>7. Kontakt</h3>
+    <p>
+        W sprawach związanych z prywatnością skontaktuj się
+        z administracją TalkZone poprzez oficjalny serwer Discord.
+    </p>
+
+</div>
+
+</section> <!-- CTA --> <section class="cta">
+<div class="cta-box">
+
+    <h2>Gotowy na TalkZone?</h2>
+
+    <p>
+        Dodaj bota do swojego serwera lub dołącz do naszej społeczności.
+    </p>
+
+    <div class="buttons">
+
+        <a
+            class="btn btn-primary"
+            href="https://discord.com/oauth2/authorize?client_id=1549859092888297573&permissions=8&integration_type=0&scope=bot"
+            target="_blank">
+            ➕ Dodaj bota
+        </a>
+
+        <a
+            class="btn btn-secondary"
+            href="https://discord.gg/QffxZBNjd"
+            target="_blank">
+            💬 Serwer Discord
+        </a>
+
+    </div>
+
+</div>
+<a href="polityka-prywatnosci.html">Polityka prywatności</a>
+<a href="regulamin.html">Regulamin</a>
+</section> <footer> <p> © 2026 <strong>TalkZone</strong>. Wszystkie prawa zastrzeżone. </p> <p> Korzystanie z TalkZone podlega regulaminowi i polityce prywatności. </p> </footer> </body> </html>
